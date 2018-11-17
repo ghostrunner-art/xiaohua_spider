@@ -12,47 +12,67 @@ from pyquery import PyQuery
 import random
 import string
 
-headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+USER_AGENT = [
+    'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
+    'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
+    'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:38.0) Gecko/20100101 Firefox/38.0',
+    'Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729; InfoPath.3; rv:11.0) like Gecko',
+    'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0;',
+    'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.0; Trident/4.0)',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:2.0.1) Gecko/20100101 Firefox/4.0.1',
+    'Mozilla/5.0 (Windows NT 6.1; rv:2.0.1) Gecko/20100101 Firefox/4.0.1',
+    'Opera/9.80 (Macintosh; Intel Mac OS X 10.6.8; U; en) Presto/2.8.131 Version/11.11',
+    'Opera/9.80 (Windows NT 6.1; U; en) Presto/2.8.131 Version/11.11',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.56 Safari/535.11',
+    'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Maxthon 2.0)',
+    'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; TencentTraveler 4.0)',
+    'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
+    'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0; SE 2.X MetaSr 1.0; SE 2.X MetaSr 1.0; .NET CLR 2.0.50727; SE 2.X MetaSr 1.0)',
+    'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; 360SE)',
+]
+HEADERS = {
+        'User-Agent':random.choice(USER_AGENT),
 }
-img_headers = {
+IMG_HEADERS = {
+        'User-Agent': random.choice(USER_AGENT),
         'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
         'Accept-Encoding':'gzip, deflate',
         'Accept-Language':'zh-CN,zh;q=0.9',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
         'Host': 'img.gaoxiaogif.cn',
         'Cookie':'__cfduid=df2ee60aa9cdd483d44514b28ffe73e3a1542014149; Hm_lvt_07a40b1ea82034a3198f8530869191ca=1542013939,1542347444; Hm_lpvt_07a40b1ea82034a3198f8530869191ca=1542356815',
         'Connection':'keep-alive',
-
-    }
-img_headers2 = {
-
-        'User-Agent': '"Mozilla/5.0 (Windows NT 6.2) AppleWebKit/536.3 (KHTML, like Gecko) Chrome/19.0.1061.1 Safari/536.3"',
-
     }
 
-
-
-MY_URL_TOU = 'http://www.gaoxiaogif.cn/gif/1'
-IMG_URL = 'http://img.gaoxiaogif.cn/GaoxiaoGiffiles/images/2015/05/17/liangzhigoujiaopei.gif'
+MY_URL_TOU = 'http://www.gaoxiaogif.cn/gif/'
+IMG_URL = 'http://n.sinaimg.cn/tech/transform/518/w207h311/20181116/rZGv-hnvukff6241151.gif'
 
 def randomstrint():# 随机文件名
     return ''.join(random.sample(string.ascii_letters + string.digits, 8)) + '.gif'
 
-res_h =requests.get(MY_URL_TOU,headers=headers)
+def dir_folder(img_name):  # 判断是否有次文件夹，如果没有则创建  通用
+    dir_img = 'img'  # 当前文件夹的文件名，这块应做成参数，更通用
+    dir_name = os.path.join(os.getcwd(),dir_img)
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
+    return os.path.join(dir_name,img_name)
 
-res = requests.get(IMG_URL,timeout =300,stream = True,headers=img_headers2,)
-# size =res.headers.get('Range')
-# print(size)
+def download_gif(url,title='error'): #下载文件 处理数据库
+    img_name = randomstrint() #获取随机生成的文件名字
+    try:
+        res = requests.get(url,timeout =300,stream = True,headers=HEADERS,)
+        with open(dir_folder(img_name), 'wb') as fd:
+            for chunk in res.iter_content(chunk_size = 65535):
+                fd.write(chunk)
+    except:
+        print('{}异常'.format(url))
+    print('下载完成')
+    return url,title,img_name
 
-with open(randomstrint(), 'wb') as fd:
-    for chunk in res.iter_content(chunk_size = 65535):
-        if chunk:
-            fd.write(chunk)
+download_gif(IMG_URL)
 
-print('下载完成')
 
-# def savimg(url,filename):
+
+    # def savimg(url,filename):
 #     pass
 # def myxiaohua(mypyq):  # 取出一页的数据函数
 #     if mypyq('.showlist li'):
