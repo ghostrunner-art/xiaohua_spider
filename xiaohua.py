@@ -68,46 +68,46 @@ def download_gif(url,title='error'): #下载文件 处理数据库
     print('下载完成')
     return url,title,img_name
 
-download_gif(IMG_URL)
 
 
 
-    # def savimg(url,filename):
+
+# def savimg(url,filename):
 #     pass
-# def myxiaohua(mypyq):  # 取出一页的数据函数
-#     if mypyq('.showlist li'):
-#         for item in mypyq('.showlist li').items():
-#             title_db = item('.showtxt').text()
-#             url_db = item('.lazy').attr('data-original')
-#             if title_db or url_db:
-#                 time.sleep(2)
-#                 print('*' * 100)
-#                 print(title_db)
-#                 print(url_db)
-#                 print('正在下载')
-#
-#                 print('完成')
-#             else:
-#                 print('*' * 100)
-#                 print('王八犊子,空文件不存数据库')
-#     else:
-#         return False
-#
-#
-# for my_url_num in range(1, 2):  # 遍历所有页码并使用取出一页数据函数处理数据
-#     # print(my_url_num)
-#     my_url = MY_URL_TOU + str(my_url_num)
-#     time.sleep(random.uniform(2, 6))
-#     print(my_url)
-#     headers = {
-#         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-#         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
-#         "Host": 'www.gaoxiaogif.cn',
-#     }
-#     r = requests.get(my_url, headers=headers)
-#     pyq = PyQuery(r.text)
-#
-#     if not myxiaohua(pyq):
-#         print('没有数据了 再见')
-#         break
+def myxiaohua(mypyq):  # 取出一页的数据函数
+    if mypyq('.showlist li'):
+        for item in mypyq('.showlist li').items():
+            title_db = item('.showtxt').text()
+            url_db = item('.lazy').attr('data-original')
+            if title_db or url_db:
+                time.sleep(2)
+                print('*' * 100)
+                print(title_db)
+                print(url_db)
+                print('正在下载')
+
+                print('完成')
+            else:
+                print('*' * 100)
+                print('王八犊子,空文件不存数据库')
+    else:
+        return False
+
+
+for my_url_num in range(1, 2):  # 遍历所有页码并使用取出一页数据函数处理数据
+    # print(my_url_num)
+    my_url = MY_URL_TOU + str(my_url_num)
+    time.sleep(random.uniform(2, 6))
+    print(my_url)
+    headers = {
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+        "Host": 'www.gaoxiaogif.cn',
+    }
+    r = requests.get(my_url, headers=headers)
+    pyq = PyQuery(r.text)
+    myxiaohua(pyq)
+    if not myxiaohua(pyq):
+        print('没有数据了 再见')
+        break
 
