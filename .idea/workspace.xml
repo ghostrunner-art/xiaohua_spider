@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9baa6b84-f8c5-4d3d-b368-e5b60c2337da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/xiaohua_spider.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/xiaohua_spider.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/CR9hvoAm.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Rnao6Ih7.gif" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/xiaohua.py" beforeDir="false" afterPath="$PROJECT_DIR$/xiaohua.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,11 +30,6 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="zhizhudb@47.92.199.246" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="zhizhudb@47.92.199.246" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
     </expand>
     <select />
   </component>
@@ -48,15 +38,11 @@
       <file leaf-file-name="xiaohua.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/xiaohua.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+            <state relative-caret-position="220">
+              <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
               <folding>
                 <element signature="e#24#33#0" expanded="true" />
-                <element signature="e#276#1793#0" />
-                <element signature="e#1870#2335#0" />
-                <element signature="e#2507#2586#0" />
-                <element signature="e#2643#2842#0" />
-                <element signature="e#2897#3262#0" />
+                <element signature="e#34#46#0" />
               </folding>
             </state>
           </provider>
@@ -178,23 +164,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3378076" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32997763" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3378076" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.3294714" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32997763" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.43847874" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13752665" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="5" visible="true" weight="0.24040511" />
+      <window_info anchor="right" id="Database" order="5" visible="true" weight="0.24040511" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3294714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39932886" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -218,15 +203,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/xiaohua.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1738">
+          <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+          <folding>
+            <element signature="e#24#33#0" expanded="true" />
+            <element signature="e#34#46#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xiaohua.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1518">
           <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <element signature="e#276#1793#0" />
-            <element signature="e#1870#2335#0" />
-            <element signature="e#2507#2586#0" />
-            <element signature="e#2643#2842#0" />
-            <element signature="e#2897#3262#0" />
+            <element signature="e#34#46#0" />
           </folding>
         </state>
       </provider>
@@ -237,11 +229,7 @@
           <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <element signature="e#276#1793#0" />
-            <element signature="e#1870#2335#0" />
-            <element signature="e#2507#2586#0" />
-            <element signature="e#2643#2842#0" />
-            <element signature="e#2897#3262#0" />
+            <element signature="e#34#46#0" />
           </folding>
         </state>
       </provider>
@@ -252,11 +240,7 @@
           <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <element signature="e#276#1793#0" />
-            <element signature="e#1870#2335#0" />
-            <element signature="e#2507#2586#0" />
-            <element signature="e#2643#2842#0" />
-            <element signature="e#2897#3262#0" />
+            <element signature="e#34#46#0" />
           </folding>
         </state>
       </provider>
@@ -337,15 +321,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/xiaohua.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="79" column="46" lean-forward="true" selection-start-line="79" selection-start-column="46" selection-end-line="79" selection-end-column="46" />
+        <state relative-caret-position="220">
+          <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
           <folding>
             <element signature="e#24#33#0" expanded="true" />
-            <element signature="e#276#1793#0" />
-            <element signature="e#1870#2335#0" />
-            <element signature="e#2507#2586#0" />
-            <element signature="e#2643#2842#0" />
-            <element signature="e#2897#3262#0" />
+            <element signature="e#34#46#0" />
           </folding>
         </state>
       </provider>

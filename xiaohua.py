@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 import os
 # import sys
-import requests
-import urllib3
-from urllib import request
-from urllib import request as rq
+# import urllib3
+# from urllib import request
+# from urllib import request as rq
 # from PIL import Image
-import time
 # from bs4 import BeautifulSoup
+import requests
+import time
+
 from pyquery import PyQuery
 import random
 import string
@@ -67,9 +68,6 @@ def download_gif(url,title='error'): #下载文件 处理数据库
         print('{}异常'.format(url))
     print('下载完成')
     return url,title,img_name
-
-
-
 
 
 # def savimg(url,filename):
