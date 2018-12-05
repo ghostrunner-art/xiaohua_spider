@@ -92,20 +92,22 @@ def myxiaohua(mypyq):  # 取出一页的数据函数
         return False
 
 
-for my_url_num in range(1, 2):  # 遍历所有页码并使用取出一页数据函数处理数据
-    # print(my_url_num)
-    my_url = MY_URL_TOU + str(my_url_num)
-    time.sleep(random.uniform(2, 6))
-    print(my_url)
-    headers = {
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
-        "Host": 'www.gaoxiaogif.cn',
-    }
-    r = requests.get(my_url, headers=headers)
-    pyq = PyQuery(r.text)
-    myxiaohua(pyq)
-    if not myxiaohua(pyq):
-        print('没有数据了 再见')
-        break
+if __name__ == '__main__':
+    for my_url_num in range(1, 2):  # 遍历所有页码并使用取出一页数据函数处理数据
+        # print(my_url_num)
+        my_url = MY_URL_TOU + str(my_url_num)
+        time.sleep(random.uniform(2, 6))
+        print(my_url)
+        headers = {
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.92 Safari/537.36',
+            "Host": 'www.gaoxiaogif.cn',
+        }
+        r = requests.get(my_url, headers=headers)
+        pyq = PyQuery(r.text)
+        myxiaohua(pyq)
+        if not myxiaohua(pyq):
+            print('没有数据了 再见')
+            break
+
 
