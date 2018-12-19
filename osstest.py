@@ -13,9 +13,28 @@ endpoint = 'http://oss-cn-zhangjiakou.aliyuncs.com'
 
 bucket = oss2.Bucket(auth, endpoint, 'xiaohuatest',connect_timeout=30)
 
-service = oss2.Service(auth,endpoint)
+# service = oss2.Service(auth,endpoint)
 
 name_cloud, name_local = mypath.filename_path('16.jpg')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # bucket.create_bucket(oss2.models.BUCKET_ACL_PUBLIC_READ) # 创建bucket并指定权限
 

@@ -2,7 +2,6 @@
 
 import os
 
-
 class Mypath(object):
     def __init__(self, file):
         '''
@@ -21,7 +20,7 @@ class Mypath(object):
 
     def filename_path(self, file_name):
         '''
-        :param imgpath_name:文件名
+        :param file_name:文件名
         :return:文件名及文件路径，元组
         '''
         return file_name, os.path.join(self.file_path(), file_name)
